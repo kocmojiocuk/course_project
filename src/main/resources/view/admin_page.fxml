@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="678.0" prefWidth="1132.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.myshkovets.app.javaFX.сontroller.AdminPageController">
+   <children>
+      <JFXTabPane fx:id="tabPane" layoutX="116.0" layoutY="64.0" prefHeight="710.0" prefWidth="1132.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab fx:id="tab" text="     статистика     ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="643.0" prefWidth="914.0" style="-fx-background-color: #DCDCDC;" />
+                        <TableView fx:id="table" layoutX="18.0" layoutY="15.0" prefHeight="609.0" prefWidth="902.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="15.0">
+                          <columns>
+                            <TableColumn fx:id="operation" prefWidth="117.0" text="операция" />
+                            <TableColumn fx:id="content" prefWidth="345.0" text="содержание" />
+                              <TableColumn fx:id="quantity" prefWidth="111.0" text="количество" />
+                              <TableColumn fx:id="cash" prefWidth="143.0" text="средства" />
+                              <TableColumn fx:id="date" prefWidth="128.0" text="дата" />
+                              <TableColumn fx:id="checker" prefWidth="39.0" />
+                          </columns>
+                        </TableView>
+                        <JFXListView fx:id="listView" cache="true" cacheHint="SCALE_AND_ROTATE" layoutX="910.0" layoutY="-1.0" prefHeight="643.0" prefWidth="261.0" style="-fx-background-color: #A9A9A9;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="910.0" AnchorPane.rightAnchor="-39.0" AnchorPane.topAnchor="-1.0" />
+                        <AnchorPane fx:id="buttonPane" layoutX="922.0" layoutY="218.0" prefHeight="54.0" prefWidth="47.0" />
+                        <StackPane fx:id="pane" layoutX="572.0" layoutY="135.0" prefHeight="131.0" prefWidth="255.0" />
+                        <AnchorPane fx:id="anchor" layoutX="1109.0" layoutY="215.0" prefHeight="57.0" prefWidth="62.0" />
+                        <AnchorPane layoutX="903.0" layoutY="-2.0" prefHeight="643.0" prefWidth="18.0" style="-fx-background-color: #DCDCDC;" />
+                        <AnchorPane fx:id="buttonPaneNext" layoutX="922.0" layoutY="233.0" prefHeight="25.0" prefWidth="69.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="       цели         ">
+              <content>
+                <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC;">
+                     <children>
+                        <JFXListView fx:id="goalsListField" layoutX="104.0" layoutY="89.0" prefHeight="571.0" prefWidth="562.0" style="-fx-background-color: #DCDCDC;" />
+                        <Label layoutX="305.0" layoutY="14.0" prefHeight="50.0" prefWidth="397.0" text="Цели:">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

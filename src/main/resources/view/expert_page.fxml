@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="948.0" stylesheets="/css/expert.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.myshkovets.app.javaFX.сontroller.ExpertPageController">
+    <tabs>
+        <Tab text="                 анализ данных                  ">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="931.0" style="-fx-background-color: #FFEBCD;">
+                    <children>
+                        <JFXListView fx:id="listViewAnalysis" layoutX="47.0" layoutY="452.0" prefHeight="160.0" prefWidth="857.0" style="-fx-background-color: #DEB887;" />
+                        <LineChart fx:id="LineChartAnalysis" layoutX="436.0" layoutY="12.0" prefHeight="418.0" prefWidth="444.0" style=": ;">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                        <PieChart fx:id="pieChartAnalysis" layoutX="27.0" layoutY="12.0" prefHeight="431.0" prefWidth="391.0" />
+                  <Label fx:id="label1" layoutX="916.0" layoutY="270.0" prefHeight="60.0" prefWidth="56.0" />
+                  <Label fx:id="updateChart" layoutX="878.0" layoutY="24.0" prefHeight="87.0" prefWidth="76.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="                   выбор целей                     ">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFEBCD;">
+                    <children>
+                        <JFXListView fx:id="listViewChoise_1" layoutX="76.0" layoutY="27.0" prefHeight="192.0" prefWidth="540.0" style="-fx-background-color: #DEB887;" />
+                        <TableView fx:id="statisticsTable" layoutX="75.0" layoutY="460.0" prefHeight="169.0" prefWidth="799.0">
+                            <columns>
+                                <TableColumn fx:id="operation" prefWidth="123.0" text="операция" />
+                                <TableColumn fx:id="content" prefWidth="396.0" text="содержание" />
+                                <TableColumn fx:id="quantity" minWidth="0.0" prefWidth="92.0" text="количество" />
+                                <TableColumn fx:id="cash" prefWidth="90.0" text="средства" />
+                                <TableColumn fx:id="date" prefWidth="143.0" text="дата" />
+                            </columns>
+                        </TableView>
+                        <JFXListView fx:id="listViewChoice_2" layoutX="76.0" layoutY="261.0" prefHeight="192.0" prefWidth="540.0" style="-fx-background-color: #DEB887;" />
+                        <JFXComboBox fx:id="choiceCount" focusColor="#F5DEB3" layoutX="696.0" layoutY="255.0" onAction="#choiceAction" prefHeight="31.0" prefWidth="169.0" unFocusColor="#DEB887" />
+                        <JFXTextField fx:id="additionalTextField" focusColor="#F5DEB3" layoutX="701.0" layoutY="306.0" prefHeight="31.0" prefWidth="39.0" unFocusColor="#DEB887" />
+                        <JFXButton fx:id="additionalButton" layoutX="752.0" layoutY="306.0" onAction="#additionalButtonAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #DEB887;" text="Подвердить" textFill="WHITE" wrapText="true" />
+                  <Label fx:id="label2_1" layoutX="14.0" layoutY="252.0" prefHeight="69.0" prefWidth="64.0" />
+                  <Label fx:id="label2_2" layoutX="902.0" layoutY="252.0" prefHeight="69.0" prefWidth="64.0" />
+                  <Label fx:id="addArrow" layoutX="310.0" layoutY="219.0" prefHeight="43.0" prefWidth="56.0" />
+                  <Label fx:id="removeArrow" layoutX="369.0" layoutY="218.0" prefHeight="45.0" prefWidth="52.0" />
+                  <Label fx:id="expertImage" layoutX="704.0" layoutY="72.0" prefHeight="169.0" prefWidth="97.0" />
+                  <JFXButton fx:id="additionalButton1" layoutX="664.0" layoutY="27.0" onAction="#additionalButtonAction" prefHeight="38.0" prefWidth="233.0" style="-fx-background-color: #DEB887;" text="КОЛИЧЕСТВО ЭКСПЕРТОВ" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="                  экспертная оценка                 ">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DEB887;">
+                    <children>
+                  <Label fx:id="label_2" layoutX="397.0" layoutY="485.0" prefHeight="116.0" prefWidth="366.0" style="-fx-background-color: #DEB887;" />
+                  <GridPane fx:id="gridPane2" layoutX="395.0" layoutY="65.0" prefHeight="697.0" prefWidth="802.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                        <JFXListView fx:id="listViewExpert" layoutX="85.0" layoutY="25.0" prefHeight="574.0" prefWidth="293.0" style="-fx-background-color: #DEB887;" />
+                  <GridPane fx:id="gridPane1" layoutX="403.0" layoutY="65.0" prefHeight="645.0" prefWidth="805.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label fx:id="label3" layoutX="14.0" layoutY="275.0" prefHeight="54.0" prefWidth="60.0" />
+                  <JFXButton layoutX="779.0" layoutY="563.0" onAction="#calculateAction" prefHeight="38.0" prefWidth="118.0" style="-fx-background-color: #F5DEB3;" text="Рассчитать" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="label_3" layoutX="403.0" layoutY="517.0" prefHeight="80.0" prefWidth="356.0" style="-fx-background-color: #F5DEB3; -fx-border-width: 2; -fx-border-color: #F5DEB3;" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_1" layoutX="406.0" layoutY="483.0" prefHeight="23.0" prefWidth="366.0" text="Наилучший вариант:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</JFXTabPane>

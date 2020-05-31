@@ -1,0 +1,9 @@
+package by.myshkovets.app.javaFX.message;
+
+import java.io.Serializable;
+
+public enum MessageType implements Serializable {
+    MESSAGE_TYPE, ACCOUNT, SIGN_IN, SIGN_UP, SIGN_UP_CONFIRMATION, IS_EXIST, GET_STATISTICS, GET_GOALS,
+    ADD_NEW_STATISTICS_DATA, UPDATE_STATISTICS_DATA, DELETE_STATISTICS_DATA, MAKE_NEW_GOAL, UPDATE_GOAL_DATA,
+    DELETE_GOAL_DATA
+}

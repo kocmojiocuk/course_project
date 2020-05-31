@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="173.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.myshkovets.app.javaFX.сontroller.StartPageController">
+   <children>
+      <Pane prefHeight="217.0" prefWidth="386.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <JFXTextField fx:id="passwordField" alignment="BOTTOM_LEFT" cache="true" focusColor="BLACK" layoutX="68.0" layoutY="74.0" prefHeight="44.0" prefWidth="250.0" promptText="Пароль">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXTextField>
+            <JFXTextField fx:id="loginField" alignment="BOTTOM_LEFT" cache="true" focusColor="BLACK" labelFloat="true" layoutX="68.0" layoutY="24.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="250.0" promptText="Логин" />
+            <HBox layoutX="94.0" layoutY="168.0" spacing="30.0" />
+            <JFXButton fx:id="but" layoutX="209.0" layoutY="153.0" onAction="#singInAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Войти" textFill="WHITE" />
+            <JFXButton layoutX="68.0" layoutY="153.0" maxWidth="120.0" onAction="#signUpAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Регистрация" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

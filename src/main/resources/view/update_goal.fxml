@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="288.0" prefWidth="554.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.myshkovets.app.javaFX.сontroller.accessory.UpdateGoalData">
+   <children>
+      <Label layoutX="175.0" layoutY="23.0" prefHeight="39.0" prefWidth="248.0" text="Измените цель:">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="textField" layoutX="60.0" layoutY="78.0" prefHeight="92.0" prefWidth="435.0" style="-jfx-focus-color: #000000 #000000;" unFocusColor="BLACK">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton layoutX="357.0" layoutY="212.0" onAction="#save" prefHeight="39.0" prefWidth="109.0" style="-fx-background-color: #000000;" text="Изменить" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="109.0" layoutY="212.0" onAction="#close" prefHeight="39.0" prefWidth="109.0" style="-fx-background-color: #000000;" text="Отмена" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

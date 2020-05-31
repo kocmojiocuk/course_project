@@ -1,0 +1,23 @@
+.jfx-list-cell{
+    -fx-background-color:    #F5DEB3;
+    -fx-text-fill: white ;
+    -fx-border-width: 1;
+    -fx-border-color: white;
+}
+.jfx-list-cell:selected{
+    -fx-background-color: #FFDEAD;
+
+}
+.jfx-list {
+    -fx-background-color: #F5DEB3;
+}
+.jfx-tab-pane .tab-header-background {
+
+    -fx-background-color:  #F5DEB3;
+}
+.text-field {
+    -fx-border-width: 2;
+    -fx-border-color: #DEB887;
+
+}
+
